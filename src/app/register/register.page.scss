@@ -1,0 +1,42 @@
+.register{
+    background: url('../../assets/img/welcome-back.png') no-repeat center top; 
+    background-size: cover; 
+    height:100vh; 
+    text-align: center;   
+    position: relative; 
+}
+.wrapper{
+    width:90%;
+    height:auto;
+    background-color: rgb(255, 255, 255);
+    padding:20px;
+    display: inline-block;
+    position: fixed;
+    top: 15%;
+    left: 0;
+    right: 0;
+    height: auto;
+    margin: auto;
+    border-radius: 25px;
+    
+}
+img{
+    max-width: 100%;
+    transform: translateY(-85px);
+    margin-bottom: 0;
+}
+
+a{
+    cursor: pointer;
+    display: block;
+    margin: 20px 0;
+    text-align: end;
+}
+.signBtn{
+    margin-top: 20px;
+    
+   
+}
+.list_items{
+    margin-top:-30px;
+}

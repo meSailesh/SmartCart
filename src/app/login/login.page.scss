@@ -1,0 +1,63 @@
+.register{
+    background: url('../../assets/img/welcome-back.png') no-repeat center top; 
+    background-size: cover; 
+    height:100vh; 
+    text-align: center;   
+    position: relative; 
+}
+.wrapper{
+    width:90%;
+    height:auto;
+    background-color: rgb(255, 255, 255);
+    padding:20px;
+    display: inline-block;
+    position: fixed;
+    top: 15%;
+    left: 0;
+    right: 0;
+    height: auto;
+    margin: auto;
+    border-radius: 25px;
+    
+}
+img{
+    max-width: 100%;
+    transform: translateY(-85px);
+    margin-bottom: 0;
+}
+.inputField{
+    border-radius: 20px;
+}
+a{
+    cursor: pointer;
+    display: block;
+    margin: 20px 0;
+    text-align: end;
+}
+.signBtn{
+    margin: 10px 0px 10px 5px;
+}
+.list_items{
+    margin-top:-60px;
+}
+.or_seperator{
+    text-align: center;
+    border-top: 1px solid #ccc;
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 18px;
+    margin-bottom: -5px;
+}
+.or_seperator span{
+    padding: 0 10px;
+      background: #fff;
+      position: relative;
+      top: -11px;
+      z-index: 1;
+}
+.signup{
+    cursor: pointer;
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+}

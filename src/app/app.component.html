@@ -1,0 +1,17 @@
+
+<ion-app>
+    <ion-split-pane>
+        <ion-menu>
+          <ion-header >
+            <ion-toolbar color="main">
+              <ion-title><img src="../../assets/img/home-logo.png"></ion-title>
+            </ion-toolbar>
+          </ion-header>
+
+          <ion-content padding>
+              <ion-button class="signBtn" size="large" shape="round" color="danger"  (click)="logOut()">Log Out</ion-button>
+          </ion-content>
+        </ion-menu>
+          <ion-router-outlet main></ion-router-outlet>
+      </ion-split-pane>
+</ion-app>

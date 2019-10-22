@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar color="main">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title *ngIf="!isSearchbarOpened"><img src="../../assets/img/home-logo.png"></ion-title>
+    <ion-buttons slot="end" *ngIf="!isSearchbarOpened">
+        <ion-button (click)="goTo('/cart')">
+          <ion-icon slot="icon-only" name="cart" ></ion-icon><ion-badge color="warning">64</ion-badge>
+        </ion-button>
+        <ion-button (click)="goTo('/shopping-lists')">
+          <ion-icon slot="icon-only" name="list-box" ></ion-icon>
+        </ion-button>
+        <ion-button (click)="searchbarToggle(true)">
+          <ion-icon slot="icon-only" name="search" ></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-searchbar placeholder="Search for products" *ngIf="isSearchbarOpened" showCancelButton="true" (ionCancel)="searchbarToggle(false)" (search)="onSearch()"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-slides pager [options]="slideOpts" >
+    <ion-slide *ngFor="let item of items | async">
+      <ion-img src="../../{{item.thumb}}"></ion-img>
+    </ion-slide>
+  </ion-slides>
+
+  <h4>CATEGORY</h4>
+
+  <ion-row class="category">
+    
+    <ion-col *ngFor="let category of categories | async" >
+      <ion-img src="../../{{category.thumb}}" (click)="goTo('/product/' + category.key)"></ion-img>
+      <ion-label>{{category.name}}</ion-label>
+    </ion-col>
+  </ion-row>
+  
+      <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+          <ion-fab-button (click)="scanCode()" color="dark">
+            <ion-icon name="qr-scanner"></ion-icon>
+          </ion-fab-button>
+        </ion-fab>
+</ion-content>

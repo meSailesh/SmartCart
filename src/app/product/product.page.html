@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar color="main">
+    <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+  <ion-title>{{id}}</ion-title>
+</ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-grid>
+        <ion-row >
+          <ion-col *ngFor="let product of products | async" size="6" size-sm (click)="showDetails(product)">
+            <ion-card>      
+               <ion-icon [name]="heartType"></ion-icon> 
+              <ion-img src="{{product.thumb}}" alt=""></ion-img>
+              <ion-card-content>
+                <p >{{product.name}}</p>
+                  <p class="price">
+                      {{product.price | currency:'USD':true:'1.2-2'}}
+                  </p>
+              </ion-card-content>
+              
+             </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+</ion-content>

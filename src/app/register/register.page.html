@@ -1,0 +1,31 @@
+
+<ion-content  fullscreen>
+  <div class="register">
+     
+      
+      <div class="wrapper">
+          <img src="../../assets/img/logo144x144.png" >
+      <ion-list class="list_items">
+        <ion-item class="inputField">
+          <ion-label  position="floating">Email Address</ion-label>
+          <ion-input type="email" [(ngModel)]="email"></ion-input>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label position="floating">Password</ion-label>
+          <ion-input type="password" [(ngModel)]="password"></ion-input>
+        </ion-item>
+  
+        <ion-item>
+            <ion-label position="floating">Confirm Password</ion-label>
+            <ion-input type="password" [(ngModel)]="cpassword"></ion-input>
+          </ion-item>
+    </ion-list>
+
+    <a (click)="goTo()">Already have an account?</a>
+    
+      <ion-button class="signBtn" size="large" shape="round" color="danger"  (click)="register()">Sign Up</ion-button>
+    </div>
+  </div>
+  </ion-content>
+  

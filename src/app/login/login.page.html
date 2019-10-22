@@ -1,0 +1,39 @@
+
+<ion-content  fullscreen>
+    <div class="register">
+       
+        
+        <div class="wrapper">
+            <img src="../../assets/img/logo144x144.png" >
+        <ion-list class="list_items">
+          <ion-item class="inputField">
+            <ion-label  position="floating">Email Address</ion-label>
+            <ion-input type="email" [(ngModel)]="email"></ion-input>
+          </ion-item>
+      
+          <ion-item>
+            <ion-label position="floating">Password</ion-label>
+            <ion-input type="password" [(ngModel)]="password"></ion-input>
+          </ion-item>
+    
+          
+      </ion-list>
+  
+      <a (click)="goTo('/forgot')">Forgot Password?</a>
+      
+        <ion-button class="signBtn"   shape="round" color="danger"  (click)="login()">Login</ion-button>
+        <div class="or_seperator">
+          <span>OR</span>
+        </div>
+        <div class="social">
+            <ion-button class="signBtn"   shape="round" color="primary"  (click)="register()">
+                <ion-icon name="logo-facebook"></ion-icon> Facebook
+            </ion-button>
+            <ion-button class="signBtn"   shape="round" color="danger"  (click)="register()">
+                <ion-icon name="logo-google"></ion-icon> Google</ion-button>
+        </div>
+        <a class="signup" (click)="goTo('/register')">Doesnot have account yet? Sign Up</a>
+      </div>
+    </div>
+    </ion-content>
+    
